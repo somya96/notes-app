@@ -1,0 +1,57 @@
+<div class="jumbotron text-center">
+  <h1>Welcome to Notes! </h1>
+  <p>Please login to continue</p>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="span6" style="float: none; margin: 0 auto;">
+
+      <mat-card class="ex-card">
+
+        <form [formGroup]="userlogin" (ngSubmit)="onSubmit()">
+
+          <div class="row" style="padding-left: 20px; padding-right: 20px;">
+            <div class="span6" style="float: none; margin: 0 auto;">
+              <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" formControlName="username">
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row" style="padding-left: 20px; padding-right: 20px;">
+            <div class="span6" style="float: none; margin: 0 auto;">
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="pwd">
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="span6" style="float: none; margin: 0 auto;">
+              <mat-card-actions>
+                <button mat-stroked-button type="submit" [disabled]="!userlogin.valid">Submit</button>
+              </mat-card-actions>
+            </div>
+          </div>
+
+        </form>
+
+
+        <mat-card-footer>
+          <div class="row" style="padding-left: 20px">
+            <a href="#top">New User?</a>
+          </div>
+        </mat-card-footer>
+
+
+      </mat-card>
+
+    </div>
+  </div>
+
+
+</div>
